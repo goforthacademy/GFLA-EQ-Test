@@ -8,10 +8,10 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 1000px; /* Wider form */
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5e8c7; /* Beige background similar to image */
+            background-color: #f0f0f0; /* Light grey background */
             color: #333;
         }
         .container {
@@ -61,7 +61,7 @@
         .likert-options {
             display: flex;
             justify-content: space-between;
-            max-width: 500px;
+            max-width: 600px; /* Adjusted for wider form */
             margin-bottom: 15px;
         }
         .likert-options label {
@@ -133,430 +133,433 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="https://github.com/goforthacademy/Am-I-A-Leader-A-Self-Guided-Growth-Experience-/blob/main/forms/GFLALogo.png?raw=true" alt="Go-Forth Academy Logo">
-            <h1>Go-Forth Emotional Intelligence Assessment</h1>
-            <p>At Go-Forth Companies, we believe that great leadership begins with self-awareness. That’s why we created this Emotional Intelligence (EQ) Assessment—to help you better understand how you lead, how you respond under pressure, and how you connect with others.</p>
-            <p>This isn’t a pass/fail test—it’s a growth tool designed to give you a clear snapshot of your strengths and reveal areas for development. As we continue to build a culture rooted in accountability, empathy, and excellence, your insights from this assessment will help guide your personal development journey—and support the people you lead.</p>
-            <p>Please answer honestly, based on how you typically think, feel, and act day to day. Your results will help inform future leadership training, coaching conversations, and your individual growth path at Go-Forth.</p>
-            <p><em>Let’s grow together.</em></p>
-        </div>
+        <form method="post" action="https://formspree.io/f/mqabnjpp">
+            <div class="header">
+                <img src="https://github.com/goforthacademy/Am-I-A-Leader-A-Self-Guided-Growth-Experience-/blob/main/forms/GFLALogo.png?raw=true" alt="Go-Forth Academy Logo">
+                <h1>Go-Forth Emotional Intelligence Assessment</h1>
+                <p>At Go-Forth Companies, we believe that great leadership begins with self-awareness. That’s why we created this Emotional Intelligence (EQ) Assessment—to help you better understand how you lead, how you respond under pressure, and how you connect with others.</p>
+                <p>This isn’t a pass/fail test—it’s a growth tool designed to give you a clear snapshot of your strengths and reveal areas for development. As we continue to build a culture rooted in accountability, empathy, and excellence, your insights from this assessment will help guide your personal development journey—and support the people you lead.</p>
+                <p>Please answer honestly, based on how you typically think, feel, and act day to day. Your results will help inform future leadership training, coaching conversations, and your individual growth path at Go-Forth.</p>
+                <p><em>Let’s grow together.</em></p>
+            </div>
 
-        <div class="instructions">
-            <p><strong>Instructions:</strong> Rate each statement from 1 (Strongly Disagree) to 5 (Strongly Agree).</p>
-        </div>
+            <div class="instructions">
+                <p><strong>Instructions:</strong> Rate each statement from 1 (Neutral) to 5 (Strongly Agree).</p>
+            </div>
 
-        <h2>DOMAIN 1: Know Yourself</h2>
-        <p>Self-awareness of emotions, strengths, and blind spots.</p>
-        <div class="likert-container">
-            <div class="likert-question">1. When I receive unexpected feedback, my first instinct is to stay curious, not defensive.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q1_1" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q1_1" value="2"> 2</label>
-                <label><input type="radio" name="q1_1" value="3"> 3</label>
-                <label><input type="radio" name="q1_1" value="4"> 4</label>
-                <label><input type="radio" name="q1_1" value="5"> 5 (Strongly Agree)</label>
+            <h2>DOMAIN 1: Know Yourself</h2>
+            <p>Self-awareness of emotions, strengths, and blind spots.</p>
+            <div class="likert-container">
+                <div class="likert-question">1. When I receive unexpected feedback, my first instinct is to stay curious, not defensive.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q1_1" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q1_1" value="2"> 2</label>
+                    <label><input type="radio" name="q1_1" value="3"> 3</label>
+                    <label><input type="radio" name="q1_1" value="4"> 4</label>
+                    <label><input type="radio" name="q1_1" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">2. I can usually name the emotion I'm feeling in real time.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q1_2" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q1_2" value="2"> 2</label>
+                    <label><input type="radio" name="q1_2" value="3"> 3</label>
+                    <label><input type="radio" name="q1_2" value="4"> 4</label>
+                    <label><input type="radio" name="q1_2" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">3. When things go sideways, I can pinpoint what part I played.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q1_3" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q1_3" value="2"> 2</label>
+                    <label><input type="radio" name="q1_3" value="3"> 3</label>
+                    <label><input type="radio" name="q1_3" value="4"> 4</label>
+                    <label><input type="radio" name="q1_3" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">4. I know what kinds of stress make me shut down or overreact.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q1_4" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q1_4" value="2"> 2</label>
+                    <label><input type="radio" name="q1_4" value="3"> 3</label>
+                    <label><input type="radio" name="q1_4" value="4"> 4</label>
+                    <label><input type="radio" name="q1_4" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">5. People have described me as self-aware or reflective.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q1_5" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q1_5" value="2"> 2</label>
+                    <label><input type="radio" name="q1_5" value="3"> 3</label>
+                    <label><input type="radio" name="q1_5" value="4"> 4</label>
+                    <label><input type="radio" name="q1_5" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">6. Before I act, I often take a moment to check in with myself.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q1_6" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q1_6" value="2"> 2</label>
+                    <label><input type="radio" name="q1_6" value="3"> 3</label>
+                    <label><input type="radio" name="q1_6" value="4"> 4</label>
+                    <label><input type="radio" name="q1_6" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">7. I regularly reflect on how my mood affects my decision-making.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q1_7" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q1_7" value="2"> 2</label>
+                    <label><input type="radio" name="q1_7" value="3"> 3</label>
+                    <label><input type="radio" name="q1_7" value="4"> 4</label>
+                    <label><input type="radio" name="q1_7" value="5"> 5 (Strongly Agree)</label>
+                </div>
             </div>
-            <div class="likert-question">2. I can usually name the emotion I'm feeling in real time.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q1_2" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q1_2" value="2"> 2</label>
-                <label><input type="radio" name="q1_2" value="3"> 3</label>
-                <label><input type="radio" name="q1_2" value="4"> 4</label>
-                <label><input type="radio" name="q1_2" value="5"> 5 (Strongly Agree)</label>
+            <div class="scenario">
+                <h4>Scenario A:</h4>
+                <p>A teammate gives you critical feedback on something you thought went well. What do you most likely do?</p>
+                <select name="scenario1a">
+                    <option value="a">A. Dismiss it or justify your side.</option>
+                    <option value="b">B. Thank them but don’t consider it deeply.</option>
+                    <option value="c">C. Reflect and follow up for clarity.</option>
+                    <option value="d">D. Invite more feedback and adjust accordingly.</option>
+                </select>
             </div>
-            <div class="likert-question">3. When things go sideways, I can pinpoint what part I played.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q1_3" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q1_3" value="2"> 2</label>
-                <label><input type="radio" name="q1_3" value="3"> 3</label>
-                <label><input type="radio" name="q1_3" value="4"> 4</label>
-                <label><input type="radio" name="q1_3" value="5"> 5 (Strongly Agree)</label>
+            <div class="scenario">
+                <h4>Scenario B:</h4>
+                <p>You realize you're feeling unusually frustrated during a routine task. What's your first move?</p>
+                <select name="scenario1b">
+                    <option value="a">A. Power through.</option>
+                    <option value="b">B. Blame the situation or others.</option>
+                    <option value="c">C. Pause and ask yourself why.</option>
+                    <option value="d">D. Step away, name the feeling, then re-engage.</option>
+                </select>
             </div>
-            <div class="likert-question">4. I know what kinds of stress make me shut down or overreact.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q1_4" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q1_4" value="2"> 2</label>
-                <label><input type="radio" name="q1_4" value="3"> 3</label>
-                <label><input type="radio" name="q1_4" value="4"> 4</label>
-                <label><input type="radio" name="q1_4" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">5. People have described me as self-aware or reflective.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q1_5" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q1_5" value="2"> 2</label>
-                <label><input type="radio" name="q1_5" value="3"> 3</label>
-                <label><input type="radio" name="q1_5" value="4"> 4</label>
-                <label><input type="radio" name="q1_5" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">6. Before I act, I often take a moment to check in with myself.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q1_6" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q1_6" value="2"> 2</label>
-                <label><input type="radio" name="q1_6" value="3"> 3</label>
-                <label><input type="radio" name="q1_6" value="4"> 4</label>
-                <label><input type="radio" name="q1_6" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">7. I regularly reflect on how my mood affects my decision-making.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q1_7" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q1_7" value="2"> 2</label>
-                <label><input type="radio" name="q1_7" value="3"> 3</label>
-                <label><input type="radio" name="q1_7" value="4"> 4</label>
-                <label><input type="radio" name="q1_7" value="5"> 5 (Strongly Agree)</label>
-            </div>
-        </div>
-        <div class="scenario">
-            <h4>Scenario A:</h4>
-            <p>A teammate gives you critical feedback on something you thought went well. What do you most likely do?</p>
-            <select name="scenario1a">
-                <option value="a">A. Dismiss it or justify your side.</option>
-                <option value="b">B. Thank them but don’t consider it deeply.</option>
-                <option value="c">C. Reflect and follow up for clarity.</option>
-                <option value="d">D. Invite more feedback and adjust accordingly.</option>
-            </select>
-        </div>
-        <div class="scenario">
-            <h4>Scenario B:</h4>
-            <p>You realize you're feeling unusually frustrated during a routine task. What's your first move?</p>
-            <select name="scenario1b">
-                <option value="a">A. Power through.</option>
-                <option value="b">B. Blame the situation or others.</option>
-                <option value="c">C. Pause and ask yourself why.</option>
-                <option value="d">D. Step away, name the feeling, then re-engage.</option>
-            </select>
-        </div>
 
-        <h2>DOMAIN 2: Stay Steady</h2>
-        <p>Self-regulation and emotional control under pressure.</p>
-        <div class="likert-container">
-            <div class="likert-question">1. In tense situations, I tend to stay calm and composed.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q2_1" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q2_1" value="2"> 2</label>
-                <label><input type="radio" name="q2_1" value="3"> 3</label>
-                <label><input type="radio" name="q2_1" value="4"> 4</label>
-                <label><input type="radio" name="q2_1" value="5"> 5 (Strongly Agree)</label>
+            <h2>DOMAIN 2: Stay Steady</h2>
+            <p>Self-regulation and emotional control under pressure.</p>
+            <div class="likert-container">
+                <div class="likert-question">1. In tense situations, I tend to stay calm and composed.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q2_1" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q2_1" value="2"> 2</label>
+                    <label><input type="radio" name="q2_1" value="3"> 3</label>
+                    <label><input type="radio" name="q2_1" value="4"> 4</label>
+                    <label><input type="radio" name="q2_1" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">2. If someone challenges me in a meeting, I respond thoughtfully.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q2_2" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q2_2" value="2"> 2</label>
+                    <label><input type="radio" name="q2_2" value="3"> 3</label>
+                    <label><input type="radio" name="q2_2" value="4"> 4</label>
+                    <label><input type="radio" name="q2_2" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">3. I can control my tone and body language even when irritated.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q2_3" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q2_3" value="2"> 2</label>
+                    <label><input type="radio" name="q2_3" value="3"> 3</label>
+                    <label><input type="radio" name="q2_3" value="4"> 4</label>
+                    <label><input type="radio" name="q2_3" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">4. When someone pushes my buttons, I usually respond rather than react.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q2_4" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q2_4" value="2"> 2</label>
+                    <label><input type="radio" name="q2_4" value="3"> 3</label>
+                    <label><input type="radio" name="q2_4" value="4"> 4</label>
+                    <label><input type="radio" name="q2_4" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">5. During high pressure, I rely on routines or techniques to stay grounded.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q2_5" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q2_5" value="2"> 2</label>
+                    <label><input type="radio" name="q2_5" value="3"> 3</label>
+                    <label><input type="radio" name="q2_5" value="4"> 4</label>
+                    <label><input type="radio" name="q2_5" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">6. I can stay focused even when things feel chaotic around me.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q2_6" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q2_6" value="2"> 2</label>
+                    <label><input type="radio" name="q2_6" value="3"> 3</label>
+                    <label><input type="radio" name="q2_6" value="4"> 4</label>
+                    <label><input type="radio" name="q2_6" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">7. I have strategies to stay centered when things get overwhelming.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q2_7" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q2_7" value="2"> 2</label>
+                    <label><input type="radio" name="q2_7" value="3"> 3</label>
+                    <label><input type="radio" name="q2_7" value="4"> 4</label>
+                    <label><input type="radio" name="q2_7" value="5"> 5 (Strongly Agree)</label>
+                </div>
             </div>
-            <div class="likert-question">2. If someone challenges me in a meeting, I respond thoughtfully.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q2_2" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q2_2" value="2"> 2</label>
-                <label><input type="radio" name="q2_2" value="3"> 3</label>
-                <label><input type="radio" name="q2_2" value="4"> 4</label>
-                <label><input type="radio" name="q2_2" value="5"> 5 (Strongly Agree)</label>
+            <div class="scenario">
+                <h4>Scenario A:</h4>
+                <p>A client sends an angry email blaming your team for a mistake. What’s your typical reaction?</p>
+                <select name="scenario2a">
+                    <option value="a">A. Defend immediately.</option>
+                    <option value="b">B. Take it personally.</option>
+                    <option value="c">C. Pause, gather facts, respond calmly.</option>
+                    <option value="d">D. Acknowledge feelings and suggest next steps.</option>
+                </select>
             </div>
-            <div class="likert-question">3. I can control my tone and body language even when irritated.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q2_3" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q2_3" value="2"> 2</label>
-                <label><input type="radio" name="q2_3" value="3"> 3</label>
-                <label><input type="radio" name="q2_3" value="4"> 4</label>
-                <label><input type="radio" name="q2_3" value="5"> 5 (Strongly Agree)</label>
+            <div class="scenario">
+                <h4>Scenario B:</h4>
+                <p>You’re juggling back-to-back meetings and someone brings up a new urgent issue. How do you respond?</p>
+                <select name="scenario2b">
+                    <option value="a">A. Snap and say you’re too busy.</option>
+                    <option value="b">B. Tell them to wait.</option>
+                    <option value="c">C. Ask for a quick summary and delegate.</option>
+                    <option value="d">D. Write it down and schedule a time to address it.</option>
+                </select>
             </div>
-            <div class="likert-question">4. When someone pushes my buttons, I usually respond rather than react.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q2_4" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q2_4" value="2"> 2</label>
-                <label><input type="radio" name="q2_4" value="3"> 3</label>
-                <label><input type="radio" name="q2_4" value="4"> 4</label>
-                <label><input type="radio" name="q2_4" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">5. During high pressure, I rely on routines or techniques to stay grounded.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q2_5" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q2_5" value="2"> 2</label>
-                <label><input type="radio" name="q2_5" value="3"> 3</label>
-                <label><input type="radio" name="q2_5" value="4"> 4</label>
-                <label><input type="radio" name="q2_5" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">6. I can stay focused even when things feel chaotic around me.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q2_6" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q2_6" value="2"> 2</label>
-                <label><input type="radio" name="q2_6" value="3"> 3</label>
-                <label><input type="radio" name="q2_6" value="4"> 4</label>
-                <label><input type="radio" name="q2_6" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">7. I have strategies to stay centered when things get overwhelming.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q2_7" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q2_7" value="2"> 2</label>
-                <label><input type="radio" name="q2_7" value="3"> 3</label>
-                <label><input type="radio" name="q2_7" value="4"> 4</label>
-                <label><input type="radio" name="q2_7" value="5"> 5 (Strongly Agree)</label>
-            </div>
-        </div>
-        <div class="scenario">
-            <h4>Scenario A:</h4>
-            <p>A client sends an angry email blaming your team for a mistake. What’s your typical reaction?</p>
-            <select name="scenario2a">
-                <option value="a">A. Defend immediately.</option>
-                <option value="b">B. Take it personally.</option>
-                <option value="c">C. Pause, gather facts, respond calmly.</option>
-                <option value="d">D. Acknowledge feelings and suggest next steps.</option>
-            </select>
-        </div>
-        <div class="scenario">
-            <h4>Scenario B:</h4>
-            <p>You’re juggling back-to-back meetings and someone brings up a new urgent issue. How do you respond?</p>
-            <select name="scenario2b">
-                <option value="a">A. Snap and say you’re too busy.</option>
-                <option value="b">B. Tell them to wait.</option>
-                <option value="c">C. Ask for a quick summary and delegate.</option>
-                <option value="d">D. Write it down and schedule a time to address it.</option>
-            </select>
-        </div>
 
-        <h2>DOMAIN 3: Own It</h2>
-        <p>Personal responsibility, drive, and initiative.</p>
-        <div class="likert-container">
-            <div class="likert-question">1. I take initiative even when it's not expected of me.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q3_1" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q3_1" value="2"> 2</label>
-                <label><input type="radio" name="q3_1" value="3"> 3</label>
-                <label><input type="radio" name="q3_1" value="4"> 4</label>
-                <label><input type="radio" name="q3_1" value="5"> 5 (Strongly Agree)</label>
+            <h2>DOMAIN 3: Own It</h2>
+            <p>Personal responsibility, drive, and initiative.</p>
+            <div class="likert-container">
+                <div class="likert-question">1. I take initiative even when it's not expected of me.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q3_1" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q3_1" value="2"> 2</label>
+                    <label><input type="radio" name="q3_1" value="3"> 3</label>
+                    <label><input type="radio" name="q3_1" value="4"> 4</label>
+                    <label><input type="radio" name="q3_1" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">2. When something doesn’t get done, I check my part first.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q3_2" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q3_2" value="2"> 2</label>
+                    <label><input type="radio" name="q3_2" value="3"> 3</label>
+                    <label><input type="radio" name="q3_2" value="4"> 4</label>
+                    <label><input type="radio" name="q3_2" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">3. I follow through on tasks without needing reminders.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q3_3" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q3_3" value="2"> 2</label>
+                    <label><input type="radio" name="q3_3" value="3"> 3</label>
+                    <label><input type="radio" name="q3_3" value="4"> 4</label>
+                    <label><input type="radio" name="q3_3" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">4. I push myself to improve, even without external rewards.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q3_4" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q3_4" value="2"> 2</label>
+                    <label><input type="radio" name="q3_4" value="3"> 3</label>
+                    <label><input type="radio" name="q3_4" value="4"> 4</label>
+                    <label><input type="radio" name="q3_4" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">5. If I fall short, I admit it and work to fix it.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q3_5" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q3_5" value="2"> 2</label>
+                    <label><input type="radio" name="q3_5" value="3"> 3</label>
+                    <label><input type="radio" name="q3_5" value="4"> 4</label>
+                    <label><input type="radio" name="q3_5" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">6. I take pride in doing my best, even when no one's watching.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q3_6" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q3_6" value="2"> 2</label>
+                    <label><input type="radio" name="q3_6" value="3"> 3</label>
+                    <label><input type="radio" name="q3_6" value="4"> 4</label>
+                    <label><input type="radio" name="q3_6" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">7. I take full responsibility for my actions, even when it’s uncomfortable.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q3_7" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q3_7" value="2"> 2</label>
+                    <label><input type="radio" name="q3_7" value="3"> 3</label>
+                    <label><input type="radio" name="q3_7" value="4"> 4</label>
+                    <label><input type="radio" name="q3_7" value="5"> 5 (Strongly Agree)</label>
+                </div>
             </div>
-            <div class="likert-question">2. When something doesn’t get done, I check my part first.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q3_2" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q3_2" value="2"> 2</label>
-                <label><input type="radio" name="q3_2" value="3"> 3</label>
-                <label><input type="radio" name="q3_2" value="4"> 4</label>
-                <label><input type="radio" name="q3_2" value="5"> 5 (Strongly Agree)</label>
+            <div class="scenario">
+                <h4>Scenario A:</h4>
+                <p>You miss a key deadline that affects another team. What’s your instinctive response?</p>
+                <select name="scenario3a">
+                    <option value="a">A. Justify the delay.</option>
+                    <option value="b">B. Shift the blame.</option>
+                    <option value="c">C. Own it and offer solutions.</option>
+                    <option value="d">D. Apologize, then document what to do differently.</option>
+                </select>
             </div>
-            <div class="likert-question">3. I follow through on tasks without needing reminders.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q3_3" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q3_3" value="2"> 2</label>
-                <label><input type="radio" name="q3_3" value="3"> 3</label>
-                <label><input type="radio" name="q3_3" value="4"> 4</label>
-                <label><input type="radio" name="q3_3" value="5"> 5 (Strongly Agree)</label>
+            <div class="scenario">
+                <h4>Scenario B:</h4>
+                <p>Your manager is out for the week. There’s an issue you could either handle or escalate. What do you do?</p>
+                <select name="scenario3b">
+                    <option value="a">A. Leave it alone until they return.</option>
+                    <option value="b">B. Tell another team to deal with it.</option>
+                    <option value="c">C. Act within your authority and document it.</option>
+                    <option value="d">D. Solve it and notify your manager proactively.</option>
+                </select>
             </div>
-            <div class="likert-question">4. I push myself to improve, even without external rewards.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q3_4" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q3_4" value="2"> 2</label>
-                <label><input type="radio" name="q3_4" value="3"> 3</label>
-                <label><input type="radio" name="q3_4" value="4"> 4</label>
-                <label><input type="radio" name="q3_4" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">5. If I fall short, I admit it and work to fix it.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q3_5" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q3_5" value="2"> 2</label>
-                <label><input type="radio" name="q3_5" value="3"> 3</label>
-                <label><input type="radio" name="q3_5" value="4"> 4</label>
-                <label><input type="radio" name="q3_5" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">6. I take pride in doing my best, even when no one's watching.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q3_6" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q3_6" value="2"> 2</label>
-                <label><input type="radio" name="q3_6" value="3"> 3</label>
-                <label><input type="radio" name="q3_6" value="4"> 4</label>
-                <label><input type="radio" name="q3_6" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">7. I take full responsibility for my actions, even when it’s uncomfortable.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q3_7" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q3_7" value="2"> 2</label>
-                <label><input type="radio" name="q3_7" value="3"> 3</label>
-                <label><input type="radio" name="q3_7" value="4"> 4</label>
-                <label><input type="radio" name="q3_7" value="5"> 5 (Strongly Agree)</label>
-            </div>
-        </div>
-        <div class="scenario">
-            <h4>Scenario A:</h4>
-            <p>You miss a key deadline that affects another team. What’s your instinctive response?</p>
-            <select name="scenario3a">
-                <option value="a">A. Justify the delay.</option>
-                <option value="b">B. Shift the blame.</option>
-                <option value="c">C. Own it and offer solutions.</option>
-                <option value="d">D. Apologize, then document what to do differently.</option>
-            </select>
-        </div>
-        <div class="scenario">
-            <h4>Scenario B:</h4>
-            <p>Your manager is out for the week. There’s an issue you could either handle or escalate. What do you do?</p>
-            <select name="scenario3b">
-                <option value="a">A. Leave it alone until they return.</option>
-                <option value="b">B. Tell another team to deal with it.</option>
-                <option value="c">C. Act within your authority and document it.</option>
-                <option value="d">D. Solve it and notify your manager proactively.</option>
-            </select>
-        </div>
 
-        <h2>DOMAIN 4: Read the Room</h2>
-        <p>Empathy, awareness of others, and emotional insight.</p>
-        <div class="likert-container">
-            <div class="likert-question">1. I can usually tell how others are feeling, even if they don't say it.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q4_1" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q4_1" value="2"> 2</label>
-                <label><input type="radio" name="q4_1" value="3"> 3</label>
-                <label><input type="radio" name="q4_1" value="4"> 4</label>
-                <label><input type="radio" name="q4_1" value="5"> 5 (Strongly Agree)</label>
+            <h2>DOMAIN 4: Read the Room</h2>
+            <p>Empathy, awareness of others, and emotional insight.</p>
+            <div class="likert-container">
+                <div class="likert-question">1. I can usually tell how others are feeling, even if they don't say it.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q4_1" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q4_1" value="2"> 2</label>
+                    <label><input type="radio" name="q4_1" value="3"> 3</label>
+                    <label><input type="radio" name="q4_1" value="4"> 4</label>
+                    <label><input type="radio" name="q4_1" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">2. If someone’s having a bad day, I tend to notice right away.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q4_2" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q4_2" value="2"> 2</label>
+                    <label><input type="radio" name="q4_2" value="3"> 3</label>
+                    <label><input type="radio" name="q4_2" value="4"> 4</label>
+                    <label><input type="radio" name="q4_2" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">3. I try to understand where others are coming from before responding.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q4_3" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q4_3" value="2"> 2</label>
+                    <label><input type="radio" name="q4_3" value="3"> 3</label>
+                    <label><input type="radio" name="q4_3" value="4"> 4</label>
+                    <label><input type="radio" name="q4_3" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">4. People feel comfortable opening up to me.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q4_4" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q4_4" value="2"> 2</label>
+                    <label><input type="radio" name="q4_4" value="3"> 3</label>
+                    <label><input type="radio" name="q4_4" value="4"> 4</label>
+                    <label><input type="radio" name="q4_4" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">5. I pick up on non-verbal cues (body language, tone, etc.) easily.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q4_5" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q4_5" value="2"> 2</label>
+                    <label><input type="radio" name="q4_5" value="3"> 3</label>
+                    <label><input type="radio" name="q4_5" value="4"> 4</label>
+                    <label><input type="radio" name="q4_5" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">6. I can adapt how I speak depending on who I'm talking to.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q4_6" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q4_6" value="2"> 2</label>
+                    <label><input type="radio" name="q4_6" value="3"> 3</label>
+                    <label><input type="radio" name="q4_6" value="4"> 4</label>
+                    <label><input type="radio" name="q4_6" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">7. I seek feedback on how my actions impact others.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q4_7" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q4_7" value="2"> 2</label>
+                    <label><input type="radio" name="q4_7" value="3"> 3</label>
+                    <label><input type="radio" name="q4_7" value="4"> 4</label>
+                    <label><input type="radio" name="q4_7" value="5"> 5 (Strongly Agree)</label>
+                </div>
             </div>
-            <div class="likert-question">2. If someone’s having a bad day, I tend to notice right away.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q4_2" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q4_2" value="2"> 2</label>
-                <label><input type="radio" name="q4_2" value="3"> 3</label>
-                <label><input type="radio" name="q4_2" value="4"> 4</label>
-                <label><input type="radio" name="q4_2" value="5"> 5 (Strongly Agree)</label>
+            <div class="scenario">
+                <h4>Scenario A:</h4>
+                <p>You notice someone in a meeting seems unusually quiet. What do you do?</p>
+                <select name="scenario4a">
+                    <option value="a">A. Ignore it.</option>
+                    <option value="b">B. Ask them directly in front of others.</option>
+                    <option value="c">C. Follow up afterward to check in.</option>
+                    <option value="d">D. Loop them in quietly and give space to respond.</option>
+                </select>
             </div>
-            <div class="likert-question">3. I try to understand where others are coming from before responding.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q4_3" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q4_3" value="2"> 2</label>
-                <label><input type="radio" name="q4_3" value="3"> 3</label>
-                <label><input type="radio" name="q4_3" value="4"> 4</label>
-                <label><input type="radio" name="q4_3" value="5"> 5 (Strongly Agree)</label>
+            <div class="scenario">
+                <h4>Scenario B:</h4>
+                <p>You're in a group conversation where tension seems to be rising. What’s your go-to move?</p>
+                <select name="scenario4b">
+                    <option value="a">A. Exit the conversation.</option>
+                    <option value="b">B. Call it out bluntly.</option>
+                    <option value="c">C. Acknowledge it and invite calm.</option>
+                    <option value="d">D. Steer the topic or name what you observe.</option>
+                </select>
             </div>
-            <div class="likert-question">4. People feel comfortable opening up to me.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q4_4" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q4_4" value="2"> 2</label>
-                <label><input type="radio" name="q4_4" value="3"> 3</label>
-                <label><input type="radio" name="q4_4" value="4"> 4</label>
-                <label><input type="radio" name="q4_4" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">5. I pick up on non-verbal cues (body language, tone, etc.) easily.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q4_5" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q4_5" value="2"> 2</label>
-                <label><input type="radio" name="q4_5" value="3"> 3</label>
-                <label><input type="radio" name="q4_5" value="4"> 4</label>
-                <label><input type="radio" name="q4_5" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">6. I can adapt how I speak depending on who I'm talking to.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q4_6" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q4_6" value="2"> 2</label>
-                <label><input type="radio" name="q4_6" value="3"> 3</label>
-                <label><input type="radio" name="q4_6" value="4"> 4</label>
-                <label><input type="radio" name="q4_6" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">7. I seek feedback on how my actions impact others.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q4_7" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q4_7" value="2"> 2</label>
-                <label><input type="radio" name="q4_7" value="3"> 3</label>
-                <label><input type="radio" name="q4_7" value="4"> 4</label>
-                <label><input type="radio" name="q4_7" value="5"> 5 (Strongly Agree)</label>
-            </div>
-        </div>
-        <div class="scenario">
-            <h4>Scenario A:</h4>
-            <p>You notice someone in a meeting seems unusually quiet. What do you do?</p>
-            <select name="scenario4a">
-                <option value="a">A. Ignore it.</option>
-                <option value="b">B. Ask them directly in front of others.</option>
-                <option value="c">C. Follow up afterward to check in.</option>
-                <option value="d">D. Loop them in quietly and give space to respond.</option>
-            </select>
-        </div>
-        <div class="scenario">
-            <h4>Scenario B:</h4>
-            <p>You're in a group conversation where tension seems to be rising. What’s your go-to move?</p>
-            <select name="scenario4b">
-                <option value="a">A. Exit the conversation.</option>
-                <option value="b">B. Call it out bluntly.</option>
-                <option value="c">C. Acknowledge it and invite calm.</option>
-                <option value="d">D. Steer the topic or name what you observe.</option>
-            </select>
-        </div>
 
-        <h2>DOMAIN 5: Connect & Influence</h2>
-        <p>Relationship-building, communication, and leadership presence.</p>
-        <div class="likert-container">
-            <div class="likert-question">1. I can build rapport quickly with new people.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q5_1" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q5_1" value="2"> 2</label>
-                <label><input type="radio" name="q5_1" value="3"> 3</label>
-                <label><input type="radio" name="q5_1" value="4"> 4</label>
-                <label><input type="radio" name="q5_1" value="5"> 5 (Strongly Agree)</label>
+            <h2>DOMAIN 5: Connect & Influence</h2>
+            <p>Relationship-building, communication, and leadership presence.</p>
+            <div class="likert-container">
+                <div class="likert-question">1. I can build rapport quickly with new people.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q5_1" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q5_1" value="2"> 2</label>
+                    <label><input type="radio" name="q5_1" value="3"> 3</label>
+                    <label><input type="radio" name="q5_1" value="4"> 4</label>
+                    <label><input type="radio" name="q5_1" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">2. When giving feedback, I consider how the person might take it.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q5_2" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q5_2" value="2"> 2</label>
+                    <label><input type="radio" name="q5_2" value="3"> 3</label>
+                    <label><input type="radio" name="q5_2" value="4"> 4</label>
+                    <label><input type="radio" name="q5_2" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">3. I know how to lead people without relying on authority.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q5_3" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q5_3" value="2"> 2</label>
+                    <label><input type="radio" name="q5_3" value="3"> 3</label>
+                    <label><input type="radio" name="q5_3" value="4"> 4</label>
+                    <label><input type="radio" name="q5_3" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">4. I help bring people together when there’s conflict.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q5_4" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q5_4" value="2"> 2</label>
+                    <label><input type="radio" name="q5_4" value="3"> 3</label>
+                    <label><input type="radio" name="q5_4" value="4"> 4</label>
+                    <label><input type="radio" name="q5_4" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">5. I can influence others without being pushy.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q5_5" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q5_5" value="2"> 2</label>
+                    <label><input type="radio" name="q5_5" value="3"> 3</label>
+                    <label><input type="radio" name="q5_5" value="4"> 4</label>
+                    <label><input type="radio" name="q5_5" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">6. I intentionally build trust with those I work with.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q5_6" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q5_6" value="2"> 2</label>
+                    <label><input type="radio" name="q5_6" value="3"> 3</label>
+                    <label><input type="radio" name="q5_6" value="4"> 4</label>
+                    <label><input type="radio" name="q5_6" value="5"> 5 (Strongly Agree)</label>
+                </div>
+                <div class="likert-question">7. I make a conscious effort to build trust with those I lead.</div>
+                <div class="likert-options">
+                    <label><input type="radio" name="q5_7" value="1"> 1 (Neutral)</label>
+                    <label><input type="radio" name="q5_7" value="2"> 2</label>
+                    <label><input type="radio" name="q5_7" value="3"> 3</label>
+                    <label><input type="radio" name="q5_7" value="4"> 4</label>
+                    <label><input type="radio" name="q5_7" value="5"> 5 (Strongly Agree)</label>
+                </div>
             </div>
-            <div class="likert-question">2. When giving feedback, I consider how the person might take it.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q5_2" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q5_2" value="2"> 2</label>
-                <label><input type="radio" name="q5_2" value="3"> 3</label>
-                <label><input type="radio" name="q5_2" value="4"> 4</label>
-                <label><input type="radio" name="q5_2" value="5"> 5 (Strongly Agree)</label>
+            <div class="scenario">
+                <h4>Scenario A:</h4>
+                <p>You're asked to lead a team of peers with mixed opinions on direction. What’s your first step?</p>
+                <select name="scenario5a">
+                    <option value="a">A. Pick a direction and move forward.</option>
+                    <option value="b">B. Ask your manager what to do.</option>
+                    <option value="c">C. Facilitate a discussion to find common ground.</option>
+                    <option value="d">D. Delegate tasks while you decide privately.</option>
+                </select>
             </div>
-            <div class="likert-question">3. I know how to lead people without relying on authority.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q5_3" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q5_3" value="2"> 2</label>
-                <label><input type="radio" name="q5_3" value="3"> 3</label>
-                <label><input type="radio" name="q5_3" value="4"> 4</label>
-                <label><input type="radio" name="q5_3" value="5"> 5 (Strongly Agree)</label>
+            <div class="scenario">
+                <h4>Scenario B:</h4>
+                <p>You need to give constructive feedback to a teammate who is defensive. What’s your strategy?</p>
+                <select name="scenario5b">
+                    <option value="a">A. Avoid the conversation.</option>
+                    <option value="b">B. Be blunt to get it over with.</option>
+                    <option value="c">C. Use questions to open dialogue.</option>
+                    <option value="d">D. Affirm strengths, then share the challenge.</option>
+                </select>
             </div>
-            <div class="likert-question">4. I help bring people together when there’s conflict.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q5_4" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q5_4" value="2"> 2</label>
-                <label><input type="radio" name="q5_4" value="3"> 3</label>
-                <label><input type="radio" name="q5_4" value="4"> 4</label>
-                <label><input type="radio" name="q5_4" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">5. I can influence others without being pushy.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q5_5" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q5_5" value="2"> 2</label>
-                <label><input type="radio" name="q5_5" value="3"> 3</label>
-                <label><input type="radio" name="q5_5" value="4"> 4</label>
-                <label><input type="radio" name="q5_5" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">6. I intentionally build trust with those I work with.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q5_6" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q5_6" value="2"> 2</label>
-                <label><input type="radio" name="q5_6" value="3"> 3</label>
-                <label><input type="radio" name="q5_6" value="4"> 4</label>
-                <label><input type="radio" name="q5_6" value="5"> 5 (Strongly Agree)</label>
-            </div>
-            <div class="likert-question">7. I make a conscious effort to build trust with those I lead.</div>
-            <div class="likert-options">
-                <label><input type="radio" name="q5_7" value="1"> 1 (Neutral)</label>
-                <label><input type="radio" name="q5_7" value="2"> 2</label>
-                <label><input type="radio" name="q5_7" value="3"> 3</label>
-                <label><input type="radio" name="q5_7" value="4"> 4</label>
-                <label><input type="radio" name="q5_7" value="5"> 5 (Strongly Agree)</label>
-            </div>
-        </div>
-        <div class="scenario">
-            <h4>Scenario A:</h4>
-            <p>You're asked to lead a team of peers with mixed opinions on direction. What’s your first step?</p>
-            <select name="scenario5a">
-                <option value="a">A. Pick a direction and move forward.</option>
-                <option value="b">B. Ask your manager what to do.</option>
-                <option value="c">C. Facilitate a discussion to find common ground.</option>
-                <option value="d">D. Delegate tasks while you decide privately.</option>
-            </select>
-        </div>
-        <div class="scenario">
-            <h4>Scenario B:</h4>
-            <p>You need to give constructive feedback to a teammate who is defensive. What’s your strategy?</p>
-            <select name="scenario5b">
-                <option value="a">A. Avoid the conversation.</option>
-                <option value="b">B. Be blunt to get it over with.</option>
-                <option value="c">C. Use questions to open dialogue.</option>
-                <option value="d">D. Affirm strengths, then share the challenge.</option>
-            </select>
-        </div>
 
-        <div class="footer">
-            <p>Thank you for taking the time to complete this Emotional Intelligence Assessment. Your willingness to reflect, grow, and lead with intention is what makes Go-Forth strong.</p>
-            <p>In the next steps, you’ll receive a personalized summary of your results along with a reflection worksheet. This will help you identify where you’re strong and where you may want to stretch—and set the tone for meaningful leadership conversations with your manager or coach.</p>
-            <p><em>Remember:</em> Emotional intelligence is a skill, and like any skill, it grows with awareness and practice. Let this be a stepping stone toward becoming the kind of leader others want to follow.</p>
-            <p><strong>We’re proud to walk this journey with you.</strong></p>
-        </div>
+            <div class="footer">
+                <p>Thank you for taking the time to complete this Emotional Intelligence Assessment. Your willingness to reflect, grow, and lead with intention is what makes Go-Forth strong.</p>
+                <p>In the next steps, you’ll receive a personalized summary of your results along with a reflection worksheet. This will help you identify where you’re strong and where you may want to stretch—and set the tone for meaningful leadership conversations with your manager or coach.</p>
+                <p><em>Remember:</em> Emotional intelligence is a skill, and like any skill, it grows with awareness and practice. Let this be a stepping stone toward becoming the kind of leader others want to follow.</p>
+                <p><strong>We’re proud to walk this journey with you.</strong></p>
+                <button type="submit">Submit Assessment</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
