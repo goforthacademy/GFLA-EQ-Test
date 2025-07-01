@@ -105,6 +105,20 @@
         .footer p {
             font-size: 0.9em;
         }
+        .footer label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .footer input[type="text"],
+        .footer input[type="email"] {
+            width: 100%;
+            max-width: 300px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #800000;
+            border-radius: 5px;
+        }
         @media (max-width: 600px) {
             body {
                 padding: 10px;
@@ -127,6 +141,10 @@
             }
             .scenario select {
                 font-size: 0.9em;
+            }
+            .footer input[type="text"],
+            .footer input[type="email"] {
+                max-width: 100%;
             }
         }
     </style>
@@ -553,6 +571,13 @@
             </div>
 
             <div class="footer">
+                <label for="user_name">Your Name (Optional):</label>
+                <input type="text" name="user_name" id="user_name" placeholder="Enter your name">
+                <label for="user_email">Your Email (Optional):</label>
+                <input type="email" name="_replyto" id="user_email" placeholder="Enter your email">
+                <input type="hidden" name="_subject" value="Emotional Intelligence Assessment Submission">
+                <input type="hidden" name="_cc" value="team@example.com">
+                <input type="hidden" name="_next" value="https://yourusername.github.io/your-repo/thanks.html">
                 <p>Thank you for taking the time to complete this Emotional Intelligence Assessment. Your willingness to reflect, grow, and lead with intention is what makes Go-Forth strong.</p>
                 <p>In the next steps, you’ll receive a personalized summary of your results along with a reflection worksheet. This will help you identify where you’re strong and where you may want to stretch—and set the tone for meaningful leadership conversations with your manager or coach.</p>
                 <p><em>Remember:</em> Emotional intelligence is a skill, and like any skill, it grows with awareness and practice. Let this be a stepping stone toward becoming the kind of leader others want to follow.</p>
