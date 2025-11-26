@@ -685,8 +685,9 @@
         
         // Send to Base44
         fetch('https://peak-89599eca.base44.app/api/apps/691f74027448cc0f89599eca/functions/eqTestWebhook', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 email: formData.get('email'),
                 full_name: formData.get('name'),
