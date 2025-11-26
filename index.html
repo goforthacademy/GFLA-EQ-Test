@@ -603,20 +603,20 @@
   <!-- JavaScript Validation -->
 <script>
     document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Stop default form submission
+        
         const selects = document.querySelectorAll('select.rating-select');
         for (let select of selects) {
             const validValues = select.name.includes('Scenario') ? ['1', '2', '3', '4'] : ['1', '2', '3', '4', '5'];
             if (!select.value || !validValues.includes(select.value)) {
-                event.preventDefault();
                 alert('Please select a valid option for all questions.');
                 return;
             }
         }
         
-        // Send scores to Base44 Leadership Index
         const formData = new FormData(this);
         
-        // Calculate domain scores (average of 7 questions + 2 scenarios each)
+        // Calculate domain scores
         const domains = {
             knowYourself: [
                 'When I receive unexpected feedback, my first instinct is to stay curious, not defensive',
@@ -683,20 +683,35 @@
         
         const totalScore = scores.self_awareness + scores.self_regulation + scores.motivation + scores.empathy + scores.social_skills;
         
-        // Send to Base44
-        fetch('https://peak-89599eca.base44.app/api/apps/691f74027448cc0f89599eca/functions/eqTestWebhook', {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                email: formData.get('email'),
-                full_name: formData.get('name'),
-                scores: scores,
-                overall_score: totalScore,
-                overall_percentage: Math.round((totalScore / 25) * 100)
-            })
-        }).catch(err => console.log('Base44 webhook error:', err));
+        // Create an invisible iframe to submit to Base44
+        const iframe = document.createElement('iframe');
+        iframe.name = 'base44_target';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
         
-        // Form continues to submit to Pipedream as normal
+        // Create a hidden form for Base44
+        const base44Form = document.createElement('form');
+        base44Form.method = 'POST';
+        base44Form.action = 'https://peak-89599eca.base44.app/api/apps/691f74027448cc0f89599eca/functions/eqTestWebhook';
+        base44Form.target = 'base44_target';
+        
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'data';
+        input.value = JSON.stringify({
+            email: formData.get('email'),
+            full_name: formData.get('name'),
+            scores: scores,
+            overall_score: totalScore,
+            overall_percentage: Math.round((totalScore / 25) * 100)
+        });
+        base44Form.appendChild(input);
+        document.body.appendChild(base44Form);
+        base44Form.submit();
+        
+        // After a short delay, submit the original form to Pipedream
+        setTimeout(() => {
+            this.submit();
+        }, 500);
     });
 </script>
