@@ -600,99 +600,19 @@
         </p>
     </div>
 
-  <!-- JavaScript Validation -->
-<script>
-    document.querySelector('form').addEventListener('submit', function(event) {
-        const selects = document.querySelectorAll('select.rating-select');
-        for (let select of selects) {
-            const validValues = select.name.includes('Scenario') ? ['1', '2', '3', '4'] : ['1', '2', '3', '4', '5'];
-            if (!select.value || !validValues.includes(select.value)) {
-                event.preventDefault();
-                alert('Please select a valid option for all questions.');
-                return;
+    <!-- JavaScript Validation -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const selects = document.querySelectorAll('select.rating-select');
+            for (let select of selects) {
+                const validValues = select.name.includes('Scenario') ? ['1', '2', '3', '4'] : ['1', '2', '3', '4', '5'];
+                if (!select.value || !validValues.includes(select.value)) {
+                    event.preventDefault();
+                    alert('Please select a valid option for all questions.');
+                    return;
+                }
             }
-        }
-        
-        const formData = new FormData(this);
-        
-        const domains = {
-            knowYourself: [
-                'When I receive unexpected feedback, my first instinct is to stay curious, not defensive',
-                'I can usually name the emotion I\'m feeling in real time',
-                'When things go sideways, I can pinpoint what part I played',
-                'I know what kinds of stress make me shut down or overreact',
-                'People have described me as self-aware or reflective',
-                'Before I act, I often take a moment to check in with myself',
-                'I regularly reflect on how my mood affects my decision-making'
-            ],
-            staySteady: [
-                'I remain calm and focused during high-pressure situations',
-                'I can recover quickly from setbacks or failures',
-                'I manage my stress without taking it out on others',
-                'I adapt well to unexpected changes or challenges',
-                'I maintain a positive attitude even when things get tough',
-                'I use stress as a motivator to improve my performance',
-                'I take breaks to recharge when I feel overwhelmed'
-            ],
-            ownIt: [
-                'I take responsibility for my mistakes without making excuses',
-                'I follow through on commitments I make to my team',
-                'I seek feedback to improve my leadership skills',
-                'I hold myself to the same standards I set for others',
-                'I take initiative to solve problems before they escalate',
-                'I openly acknowledge my successes and areas for improvement',
-                'I lead by example in demonstrating accountability'
-            ],
-            connectWithOthers: [
-                'I listen actively to understand others\' perspectives',
-                'I show empathy when someone is struggling',
-                'I build trust by being reliable and approachable',
-                'I encourage open communication within my team',
-                'I recognize and appreciate others\' contributions',
-                'I resolve conflicts by finding win-win solutions',
-                'I build strong relationships that support team success'
-            ],
-            connectInfluence: [
-                'I motivate my team with a clear and compelling vision',
-                'I encourage my team to take ownership of their work',
-                'I provide constructive feedback that inspires growth',
-                'I celebrate team successes to boost morale',
-                'I lead with confidence and clarity during uncertainty',
-                'I empower others to step into leadership roles',
-                'I inspire others to exceed their own expectations'
-            ]
-        };
-        
-        function calcDomainAvg(questions) {
-            let total = 0;
-            questions.forEach(q => {
-                total += parseInt(formData.get(q) || 0);
-            });
-            return Math.round(total / questions.length);
-        }
-        
-        const scores = {
-            self_awareness: calcDomainAvg(domains.knowYourself),
-            self_regulation: calcDomainAvg(domains.staySteady),
-            motivation: calcDomainAvg(domains.ownIt),
-            empathy: calcDomainAvg(domains.connectWithOthers),
-            social_skills: calcDomainAvg(domains.connectInfluence)
-        };
-        
-        const totalScore = scores.self_awareness + scores.self_regulation + scores.motivation + scores.empathy + scores.social_skills;
-        
-        const payload = {
-            email: formData.get('email'),
-            full_name: formData.get('name'),
-            scores: scores,
-            overall_score: totalScore,
-            overall_percentage: Math.round((totalScore / 25) * 100)
-        };
-        
-        // Use image pixel to send data (avoids CORS)
-        const img = new Image();
-        img.src = 'https://peak-89599eca.base44.app/api/apps/691f74027448cc0f89599eca/functions/eqTestWebhook?data=' + encodeURIComponent(JSON.stringify(payload));
-        
-        // Form continues to submit to Pipedream as normal
-    });
-</script>
+        });
+    </script>
+</body>
+</html>
